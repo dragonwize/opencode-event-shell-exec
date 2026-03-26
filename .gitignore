@@ -1,0 +1,4 @@
+node_modules/
+bun.lock
+opencode-event-shell-exec.json
+package-lock.json

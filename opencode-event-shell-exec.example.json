@@ -1,0 +1,26 @@
+{
+  "session.idle": [
+    "notify-send 'OpenCode session completed!'"
+  ],
+  "session.*": [
+    "echo '[{event.type}] at $(date)' >> /tmp/opencode-sessions.log"
+  ],
+  "file.edited": [
+    {
+      "command": "echo 'File edited: {event.type}' >> /tmp/opencode-files.log",
+      "timeout": 5000
+    }
+  ],
+  "tool.execute.after": [
+    {
+      "command": "echo 'Tool finished: {event.type}' >> /tmp/opencode-tools.log",
+      "cwd": "/tmp",
+      "env": {
+        "LOG_LEVEL": "info"
+      }
+    }
+  ],
+  "*": [
+    "echo '{event.type}' >> /tmp/opencode-all-events.log"
+  ]
+}

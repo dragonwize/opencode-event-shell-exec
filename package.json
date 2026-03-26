@@ -1,0 +1,47 @@
+{
+  "name": "@dragonwize/opencode-event-shell-exec",
+  "version": "0.1.0",
+  "description": "OpenCode plugin that executes shell commands when configured events are triggered.",
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "shell",
+    "events",
+    "automation"
+  ],
+  "homepage": "https://github.com/dragonwize/opencode-event-shell-exec",
+  "bugs": {
+    "url": "https://github.com/dragonwize/opencode-event-shell-exec/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dragonwize/opencode-event-shell-exec.git"
+  },
+  "license": "MIT",
+  "author": "dragonwize",
+  "type": "module",
+  "main": "src/index.ts",
+  "files": [
+    "src/",
+    "opencode-event-shell-exec.example.json"
+  ],
+  "scripts": {
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@opencode-ai/plugin": "latest",
+    "@types/bun": "^1.3.9",
+    "@types/node": "^25.3.2",
+    "bun-types": "^1.3.9",
+    "typescript": "^5",
+    "undici-types": "^7.18.2",
+    "zod": "^4.1.8"
+  },
+  "peerDependencies": {
+    "@opencode-ai/plugin": "*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
